@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="../../../resources/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/aris-style.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/sample-style.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/jquery-ui.css" />
+<title>ARIS Sample Application</title>
+</head>
+<body>
+    <script src="../../../resources/js/jquery.min.js"></script>
+    <script src="../../../resources/js/jquery-ui.min.js"></script>
+  <div class="container">
+<header id="header">
+  <h3>DVD SHOP INVENTORY MANAGEMENT</h3>
+</header>
+    <div class="pull-right"></div>
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <div class="container">
+            <nav>
+              <ul class="nav">
+                  <li class="dropdown">
+                      <a href="../stock/index.html" class="dropdown-toggle">STOCK</a>
+                  </li>
+              </ul>
+              <ul class="nav pull-right">
+                <li id="fat-menu" class="dropdown">
+                  <a href="../../views/index.html" class="dropdown-toggle">LOGOUT</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </div>
+
+<div class="row">
+
+  <div class="header">
+    <ul class="breadcrumb">
+      <li>TOP<span class="divider">&gt;</span></li>
+      <li>STOCK<span class="divider">&gt;</span></li>
+      <li>UPDATE<span class="divider">&gt;</span></li>
+      <li>UPDATE CONFIRM</li>
+    </ul>
+  </div>
+
+  <div class="row">
+
+    <div class="span2"></div>
+    
+    <div class="span8">
+      <div class="text-center">
+        <h4>please, check update information...</h4>
+      </div>
+      
+      <form id="stockUpdateForm" class="text-center" action="/aris/stock/update" method="post">
+        <table class="table table-condensed update-confirm">
+          <tr>
+            <td><label for="dvdEanCode" class="text-right">DVD EAN CODE　:　</label></td>
+            <td>4988142580726</td>
+          </tr>
+          <tr>
+            <td><label class="text-right" for="dvdTitle">DVD TITLE　:　</label></td>
+            <td>Die Hard 4.0</td>
+          </tr>
+          <tr>
+            <td><label class="text-right" for="warehouseId">WAREHOUSE ID　:　</label></td>
+            <td>TKY001</td>
+          </tr>
+          <tr>
+            <td><label class="text-right" for="warehouseName">WAREHOUSE NAME　:　</label></td>
+            <td>Shibuya 1st warehouse</td>
+          </tr>
+          <tr>
+            <td><label for="warehouseAddress" class="text-right">WAREHOUSE ADDRESS　:　</label></td>
+            <td>Udagawatyou 123-444-567, Shibuyaku, Tokyo</td>
+          </tr>
+          <tr>
+            <td><label for="warehouseTel" class="text-right">WAREHOUSE TEL　:　</label></td>
+            <td>03-1234-5678</td>
+          </tr>
+          <tr>
+            <td><label for="quantity" class="text-right">QUANTITY　:　</label></td>
+            <td>1000</td>
+          </tr>
+        </table>
+        
+        <a href="../stock/updateInput.html" class="btn"><i class="icon-arrow-left icon"></i>&nbsp; Return</a>
+        <a href="../stock/updateComplete.html" class="btn btn-danger"><i class="icon-ok-sign icon-white icon"></i>&nbsp; Update</a>
+      </form>
+    
+    </div>
+    
+    <div class="span2"></div>
+  </div>  
+</div>
+   
+<footer class="span12 offset2">
+  <p>Copyright 2014 Accenture. All Rights Reserved. Accenture Confidential. For Internal Use Only.</p>
+</footer>
+  </div>
+</body>
+
+<script type="text/javascript" charset="utf-8" src="../../../resources/js/bootstrap.min.js"/></script>
+</html>

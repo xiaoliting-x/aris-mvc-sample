@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="../../../resources/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/aris-style.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/sample-style.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/jquery-ui.css" />
+<title>DVD SHOP INVENTORY MANAGEMENT</title>
+</head>
+<body>
+    <script src="../../../resources/js/jquery.min.js"></script>
+    <script src="../../../resources/js/jquery-ui.min.js"></script>
+  <div class="container">
+<header id="header">
+  <h3>DVD SHOP INVENTORY MANAGEMENT</h3>
+</header>
+    <div class="pull-right"></div>
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <div class="container">
+            <nav>
+              <ul class="nav">
+                  <li class="dropdown">
+                      <a href="../stock/index.html" class="dropdown-toggle">STOCK</a>
+                  </li>
+              </ul>
+              <ul class="nav pull-right">
+                <li id="fat-menu" class="dropdown">
+                  <a href="../../views/index.html" class="dropdown-toggle">LOGOUT</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </div>
+<script type="text/javascript">
+  jQuery(function($) {
+      $('tr[data-href]').addClass('clickable').click(function(e) {
+          if(!$(e.target).is('a')){
+              window.location = $(e.target).closest('tr').data('href');
+          }
+      });
+      
+      $('#jumpToPage').click(function() {
+    	  var url = $(this).attr("href") + '/' + $('#targetPage').val();
+          $(this).attr("href", url);
+      });
+  });  
+</script>
+
+<div class="row">
+
+  <div class="span12" style="background-color: white;">
+
+    <!-- breadcrumb -->
+    <div class="header">
+      <ul class="breadcrumb">
+        <li>TOP<span class="divider">&gt;</span></li>
+        <li>STOCK</li>
+      </ul>
+    </div>
+
+    <!-- message -->
+
+    <!-- search condition box -->
+    <div class="row">
+      <div class="span12">
+        <form id="stockSearchForm" name="search" class="text-center" action="/aris/stock/search" method="post">
+          <table class="table table-condensed">
+            <thead>
+              <tr>
+                <th colspan="2">
+                  <div class="text-left">CONDITIONS</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><label for="dvdEanCode" >DVD EAN CODE : </label></td>
+                <td><input id="dvdEanCode" name="dvdEanCode" class="input-small span3" type="text" value=""/></td>
+                <td><label for="dvdTitle" >DVD TITLE : </label></td>
+                <td><input id="dvdTitle" name="dvdTitle" class="input-small span3" type="text" value=""/></td>
+              </tr>
+              <tr>
+                <td><label for="warehouseId" >WAREHOUSE ID : </label></td>
+                <td><input id="warehouseId" name="warehouseId" class="input-small span3" type="text" value=""/></td>
+                <td><label for="warehouseName" >WAREHOUSE NAME : </label></td>
+                <td><input id="warehouseName" name="warehouseName" class="input-small span3" type="text" value=""/></td>
+                <td><input id="pageInfo.targetPage" name="pageInfo.targetPage" type="hidden" value="1"/></td>
+                <td><input id="pageInfo.pageSize" name="pageInfo.pageSize" type="hidden" value="10"/></td>
+                <td><input id="pageInfo.pageMax" name="pageInfo.pageMax" type="hidden" value="5"/></td>
+              </tr>
+              <tr>
+                <td colspan="12">
+                  <div class="text-center">
+                  <a href="../stock/search.html" class="btn">
+                      <i class="icon icon-eye-open">
+                      </i>&nbsp; SEARCH
+                  </a>                 
+                 </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="span12 offset2">
+  <p>Copyright 2014 Accenture. All Rights Reserved. Accenture Confidential. For Internal Use Only.</p>
+</footer>
+  </div>
+</body>
+
+<script type="text/javascript" charset="utf-8" src="../../../resources/js/bootstrap.min.js"/></script>
+</html>

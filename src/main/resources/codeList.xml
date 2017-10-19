@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <category name="sex">
+    <codeData code="s1" data="male" />
+    <codeData code="s2" data="famale" />
+  </category>
+  <category name="nationality">
+    <codeData code="n1" data="Japan" />
+    <codeData code="n2" data="USA" />
+    <codeData code="n3" data="Other" />
+  </category>
+</configuration>

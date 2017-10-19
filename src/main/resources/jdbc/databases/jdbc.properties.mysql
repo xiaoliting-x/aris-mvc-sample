@@ -1,0 +1,6 @@
+# application database
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/arisdb
+jdbc.username=root
+jdbc.password=1234abcd
+--jdbc.password=qAljJUez0XLHztB9goWzVg==

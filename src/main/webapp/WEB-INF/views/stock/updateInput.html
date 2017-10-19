@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" type="text/css" href="../../../resources/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/aris-style.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/sample-style.css" />
+<link rel="stylesheet" type="text/css" href="../../../resources/css/jquery-ui.css" />
+<title>ARIS Sample Application</title>
+</head>
+<body>
+    <script src="../../../resources/js/jquery.min.js"></script>
+    <script src="../../../resources/js/jquery-ui.min.js"></script>
+  <div class="container">
+    <header id="header">
+      <h3>DVD SHOP INVENTORY MANAGEMENT</h3>
+    </header>
+    <div class="pull-right"></div>
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <div class="container">
+            <nav>
+              <ul class="nav">
+                  <li class="dropdown">
+                      <a href="../stock/index.html" class="dropdown-toggle">STOCK</a>
+                  </li>
+              </ul>
+              <ul class="nav pull-right">
+                <li id="fat-menu" class="dropdown">
+                  <a href="../../views/index.html" class="dropdown-toggle">LOGOUT</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </div>
+
+<div class="row">
+  <div class="span12">
+    
+    <!-- breadcrumb -->
+    <div class="header">
+      <ul class="breadcrumb">
+        <li>TOP<span class="divider">&gt;</span></li>
+        <li>STOCK<span class="divider">&gt;</span></li>
+        <li>UPDATE<span class="divider">&gt;</span></li>
+        <li>UPDATE INPUT</li>
+      </ul>
+    </div>
+    
+    <!-- top message -->
+
+    <!-- content -->
+    <div class="row">
+    
+      <!-- right space -->
+      <div class="span2"></div>
+      
+      <!-- main content -->
+      <div class="span8">
+        
+        <!-- UPDATE FORM -->
+        <div class="text-center"><h4>STOCK UPDATE</h4></div>
+        
+        <form id="stockUpdateForm" class="form-horizontal" action="../stock/updateConfirm" method="post">
+
+          <div class="control-group">
+            <label for="dvdEanCode" class="control-label">DVD EAN CODE</label>
+            <div class="controls">
+              <input id="dvdEanCode" name="dvdEanCode" class="input-large span4" readonly="readonly" type="text" value="4988142580726"/>
+            </div>
+          </div>
+          
+          <div class="control-group ">
+            <label for="dvdTitle" class="control-label">DVD TITLE</label>
+            <div class="controls">
+              <input id="dvdTitle" name="dvdTitle" class="input-large span4" readonly="readonly" type="text" value="Die Hard 4.0"/>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="warehouseId" class="control-label">WAREHOUSE ID</label>
+            <div class="controls">
+              <input id="warehouseId" name="warehouseId" class="input-large span4" readonly="readonly" type="text" value="TKY001"/>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="warehouseName" class="control-label">WAREHOUSE NAME</label>
+            <div class="controls">
+              <input id="warehouseName" name="warehouseName" class="input-large span4" readonly="readonly" type="text" value="Shibuya 1st warehouse"/>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="warehouseAddress" class="control-label">WAREHOUSE ADDRESS</label>
+            <div class="controls">
+              <input id="warehouseAddress" name="warehouseAddress" class="input-large span4" readonly="readonly" type="text" value="Udagawatyou 123-444-567, Shibuyaku, Tokyo"/>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="warehouseTel" class="control-label">WAREHOUSE TEL</label>
+            <div class="controls">
+              <input id="warehouseTel" name="warehouseTel" class="input-large span4" readonly="readonly" type="text" value="03-1234-5678"/>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label for="quantity" class="control-label">QUANTITY</label>
+            <div class="controls">
+              <input id="quantity" name="quantity" class="input-large span4" type="text" value="1000"/>
+            </div>
+          </div>
+
+          <!-- submit or return button -->
+          <div class="control-group">
+            <div class="controls">
+              
+              <a href="../stock/detail.html" class="btn"><i class="icon-remove-sign icon"></i>&nbsp; Cancel</a>
+              <a href="../stock/updateConfirm.html" class="btn btn-success">Confirm &nbsp;<i class="icon-play icon-white icon"></i></a>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+      
+      <!-- left space -->
+      <div class="span2"></div>
+      
+    </div>
+  </div>
+</div>
+
+
+<footer class="span12 offset2">
+  <p>Copyright 2014 Accenture. All Rights Reserved. Accenture Confidential. For Internal Use Only.</p>
+</footer>
+  </div>
+</body>
+
+<script type="text/javascript" charset="utf-8" src="../../../resources/js/bootstrap.min.js"/></script>
+</html>

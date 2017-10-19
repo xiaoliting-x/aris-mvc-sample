@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accenture.aris.core.authorization.DatabaseAuthorizationDao" >
+
+  <select id="selectByName" resultType="com.accenture.aris.core.authorization.AuthorizationData">
+  select
+    t_user.id as id
+    , t_role.id as roleId
+    , t_role.name as roleName
+  from
+    t_user, t_role
+  where
+    t_user.role_id = t_role.id
+    and t_user.name = #{name}
+  </select>
+
+</mapper>

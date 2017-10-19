@@ -1,0 +1,15 @@
+body {
+  font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro','ƒƒCƒŠƒI',Meiryo,'‚l‚r ‚oƒSƒVƒbƒN',sans-serif;
+  background-color: white;
+}
+
+.table-condensed th, .table-condensed td {
+  text-align: left;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.table-condensed th *, .table-condensed td * {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.accenture.aris.core.acl.ACLCheckerDao" >
+<select id="selectByIdAndUrl" resultType="com.accenture.aris.core.acl.ACLCheckerData">
+    select
+        t_action_perm.url
+    from
+        t_action_perm
+    where
+        (t_action_perm.role_id = #{id} or t_action_perm.role_id = 'ALL')
+    and '${url}' like t_action_perm.url || '%'
+</select>
+</mapper>
